@@ -1,0 +1,6 @@
+https://github.com/shayleydon/xrwvm-fullstack_developer_capstone.git
+git clone https://github.com/shayleydon/xrwvm-fullstack_developer_capstone.git
+
+https://shayleydon-8000.theianext-0-labs-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai/
+https://shayleydon-8000.theianext-0-labs-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai/about/
+https://shayleydon-8000.theianext-0-labs-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai/contact/
