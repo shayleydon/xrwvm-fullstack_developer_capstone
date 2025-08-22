@@ -1,0 +1,202 @@
+git submodule add git@github.com:shayleydon/gentu-microservices_practiceProj.git
+git submodule add git@github.com:shayleydon/pythonflaskserver-api-helloworld.git
+git submodule add git@github.com:shayleydon/c11m2l3-jmgdo-microservices.git
+git submodule add git@github.com:shayleydon/c11m5-finalproject-microservices-serverless.git
+
+git clone --recurse-submodules -j8 git@github.com:shayleydon/ibm-full-stack-pro-c11of15-apps-microservices-serverless.git
+
+Updating a Submodule in Git
+Last Updated : 24 May, 2024
+
+Git submodules are a powerful feature that allows you to include and manage external repositories within your own Git project. This is particularly useful for managing dependencies or handling third-party libraries. However, keeping these submodules up to date can be a bit tricky. In this article, we will see the process of updating a submodule in Git.
+What are Git Submodules?
+
+A Git submodule is a repository within a repository. It allows you to clone another repository into your project and keep track of the exact commit it’s on. This is useful for projects that depend on other projects.
+Steps to Update a Submodule
+Step 1: Initialize and Update the Submodule
+
+If you’ve just cloned a repository containing submodules, you need to initialize and update them first:
+
+git submodule update --init --recursive
+
+This command initializes, fetches, and checks out the submodule’s content.
+Step 2: Fetch the Latest Changes in the Submodule
+
+Navigate to the submodule directory:
+
+cd path/to/submodule
+
+Then, fetch the latest changes from the remote repository:
+
+git fetch
+
+This command updates the submodule with the latest changes from its remote repository.
+Step 3: Checkout the Desired Commit
+
+After fetching the latest changes, you need to checkout the desired commit or branch. For instance, to checkout the latest commit on the main branch:
+
+git checkout main
+
+Alternatively, you can checkout a specific commit:
+
+git checkout <commit-hash>
+
+Replace `<commit-hash>` with the actual hash of the commit you want to checkout.
+Step 4: Pull the Latest Changes
+
+To ensure your submodule is up to date, pull the latest changes:
+
+git pull origin main
+
+This command pulls the latest changes from the specified branch.
+Step 5: Update the Parent Repository
+
+After updating the submodule, you need to update the reference in the parent repository to point to the new commit. Navigate back to the root of your main repository:
+
+cd ../..
+
+Then, add and commit the changes:
+
+git add path/to/submodule
+git commit -m "Updated submodule to latest commit"
+
+This updates the reference of the submodule to the latest commit you checked out and pulled.
+Step 6: Push the Changes to the Remote Repository
+
+Finally, push the changes to your remote repository to keep it in sync:
+
+git push origin main
+
+This command pushes your changes, including the updated submodule reference, to the remote repository.
+Example
+
+Let’s walk through a practical example. Suppose you have a repository with a submodule located at `libs/my-submodule` and you want to update it to the latest commit on its main branch.
+Step 1: Initialize and Update the Submodule (if you haven’t already):
+
+git submodule update --init --recursive
+
+Step 2. Navigate to the Submodule Directory:
+
+cd libs/my-submodule
+
+Step 3: Fetch the Latest Changes:
+
+git fetch
+
+Step 4: Checkout the Latest Commit:
+
+git checkout main
+
+Step 5: Pull the Latest Changes:
+
+git pull origin main
+
+Step 6. Navigate Back to the Parent Repository:
+
+    cd ../..
+
+Step 7: Update the Submodule Reference*
+
+    git add libs/my-submodule
+
+git commit -m "Updated my-submodule to latest commit"
+Step 8: Push the Changes to the Remote Repository:
+
+git push origin main
+
+Conclusion
+
+Updating a submodule in Git involves several steps, but it’s a simple process once you understand the workflow. By following the steps in this article, you can keep your submodules up to date, ensuring your project dependencies are current and your codebase remains stable.
+
+
+How to Update Git Submodule To Latest Commit On Origin?
+Last Updated : 19 Jun, 2024
+
+Git submodules are an essential feature for incorporating external repositories into your own project. However, keeping submodules up-to-date with their respective upstream repositories can sometimes be challenging. This guide will detail the steps to update a Git submodule to the latest commit on its origin repository.
+
+Table of Content
+
+    Steps to Update
+    Updating Specific Submodules
+    Best Practices for Managing Submodules
+    Conclusion
+
+Steps to Update
+Step 1: Navigate to the Parent Repository
+
+Open Terminal or Command Prompt: Navigate to the directory of your parent repository where the submodule is located.
+Step 2: Verify Submodule Status
+
+Check Submodule Status: Execute the following command to see the current status of the submodule.
+
+git submodule status
+
+Note Submodule Path: Take note of the submodule's path within the parent repository.
+Step 3: Update Submodule to Latest Commit
+
+Update Submodule: Use the following command to update the submodule to the latest commit on its origin repository.
+
+git submodule update --remote <submodule-path>
+
+Alternatively:
+
+If you prefer, you can navigate into the submodule directory and pull the changes directly.
+
+cd <submodule-path>
+git pull origin master  # or main, or any other branch name
+
+Step 4: Commit Changes in Parent Repository
+
+Stage Changes: After updating the submodule, stage the changes in the parent repository.
+
+git add <submodule-path>
+
+Commit Changes: Commit the submodule's updated reference to the parent repository.
+
+git commit -m "Update submodule to latest commit"
+
+Step 5: Push Changes to Origin (If Needed)
+
+Push Changes: If you're working in a shared repository and want to update the changes to the origin, push the changes.
+
+git push origin <branch-name>
+
+Updating Specific Submodules
+
+Sometimes, you might want to update only a specific submodule rather than all submodules. Here’s how you can do it:
+
+Step 1: Navigate to the Submodule Directory
+
+Change to the directory of the specific submodule you want to update.
+
+cd /path/to/your/main/repository/submodule_path
+
+Step 2: Fetch and Update
+
+Fetch the latest changes and update the submodule.
+
+git fetch origin
+git checkout origin/main
+
+Again, replace main with the branch you want to track.
+
+Step 3: Return to Main Repository
+
+Change back to the root directory of your main repository.
+
+cd /path/to/your/main/repository
+
+Step 4: Update Index
+
+Update the main repository to point to the new commit in the submodule.
+
+git add submodule_path
+git commit -m "Updated specific submodule to latest commit on origin"
+git push origin main
+
+Best Practices for Managing Submodules
+
+    Regular Updates: Regularly update your submodules to ensure you have the latest changes and bug fixes from their repositories.
+    Branch Tracking: Explicitly track branches for submodules to avoid unintended changes. This can be set in the .gitmodules file.
+    Clear Commit Messages: Use clear and descriptive commit messages when updating submodules, indicating what has changed and why.
+    Version Control: Consider version tagging for submodules to ensure stability and reproducibility of your project.
