@@ -14,7 +14,22 @@ http://127.0.0.1:8000/fetchDealers
 http://127.0.0.1:8000/fetchDealer/3
 http://127.0.0.1:8000/fetchDealers/Kansas
 
-SEE
-howto-setup-install.txt
-howto-venv-example.txt
 
+######################::Python Django App static and backend::######################
+cd /home/project/xrwvm-fullstack_developer_capstone/server
+pip install virtualenv
+virtualenv djangoenv
+source djangoenv/bin/activate
+python3 -m pip install -U -r requirements.txt
+python3 manage.py makemigrations
+python3 manage.py migrate
+python3 manage.py createsuperuser
+python3 manage.py runserver
+######################::ReactAPP frontend components::######################
+cd /home/project/xrwvm-fullstack_developer_capstone/server/frontend
+npm install
+npm run build
+######################::Implement API endpoints using Express-Mongo database::######################
+cd /home/project/xrwvm-fullstack_developer_capstone/server/database
+docker build . -t nodeapp
+docker-compose up

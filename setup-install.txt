@@ -1,0 +1,42 @@
+https://github.com/shayleydon/xrwvm-fullstack_developer_capstone.git
+git clone https://github.com/shayleydon/xrwvm-fullstack_developer_capstone.git
+
+ALLOWED_HOSTS=['127.0.0.1', 'localhost', 'http://127.0.0.1:8000', 'https://shayleydon-8000.theianext-0-labs-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai']
+CSRF_TRUSTED_ORIGINS=['http://127.0.0.1:8000', 'http://localhost', 'https://shayleydon-8000.theianext-0-labs-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai']
+
+https://shayleydon-8000.theianext-0-labs-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai/
+https://shayleydon-8000.theianext-0-labs-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai/about/
+https://shayleydon-8000.theianext-0-labs-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai/contact/
+
+https://shayleydon-8000.theiadockernext-1-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/djangoapp/get_cars
+
+
+http://127.0.0.1:8000/fetchReviews/dealer/29
+http://127.0.0.1:8000/fetchDealers
+http://127.0.0.1:8000/fetchDealer/3
+http://127.0.0.1:8000/fetchDealers/Kansas
+
+
+######################::Python Django App static and backend::######################
+cd /home/project/xrwvm-fullstack_developer_capstone/server
+pip install virtualenv
+virtualenv djangoenv
+source djangoenv/bin/activate
+python3 -m pip install -U -r requirements.txt
+python3 manage.py makemigrations
+python3 manage.py migrate
+python3 manage.py createsuperuser
+python3 manage.py runserver
+######################::ReactAPP frontend components::######################
+cd /home/project/xrwvm-fullstack_developer_capstone/server/frontend
+npm install
+npm run build
+######################::Implement API endpoints using Express-Mongo database::######################
+cd /home/project/xrwvm-fullstack_developer_capstone/server/database
+docker build . -t nodeapp
+docker-compose up
+######################::Populate CarMakes CarModels::######################
+python3 manage.py makemigrations
+python3 manage.py migrate --run-syncdb
+https://shayleydon-8000.theiadockernext-1-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/djangoapp/get_cars
+http://127.0.0.1:8000/djangoapp/get_cars
