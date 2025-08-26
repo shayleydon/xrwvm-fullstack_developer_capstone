@@ -1,0 +1,67 @@
+https://github.com/shayleydon/xrwvm-fullstack_developer_capstone.git
+git clone https://github.com/shayleydon/xrwvm-fullstack_developer_capstone.git
+
+::DEPLOYED KUBERNETES::
+
+https://shayleydon-8000.theiadockernext-1-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/
+https://shayleydon-8000.theiadockernext-1-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/
+
+
+Task 1: Submit the personal GitHub Project repo URL with all code changes. (1 point)
+https://github.com/shayleydon/xrwvm-fullstack_developer_capstone.git
+
+Task 2: Submit the screenshot showing the Django server running. (1 point)
+
+Task 3: Submit the screenshot of the “About Us” page of the Django application. (3 points)
+
+Task 4: Submit the screenshot of the “Contact Us” page of the Django application. (2 points)
+
+Task 5: Submit the screenshot of the “Login” page of the Django application. (2 points)
+
+Task 6: Submit the screenshot of the “Logout alert” of the Django application. (2 points)
+
+Task 7: Submit the screenshot of the “Sign-Up” page of the Django application. (1 point)
+
+Task 8: Submit the screenshot showing dealer reviews through the Express-Mongo application endpoint. The endpoint should be visible on the browser address bar. Please ensure you choose a dealer who has reviews. (2 points)
+
+Task 9: Submit the screenshot showing all dealers through the Express-Mongo application endpoint. The endpoint should be visible on the browser address bar. (2 points)
+
+Task 10: Submit the screenshot showing all dealer details through the Express-Mongo application endpoint. The endpoint should be visible on the browser address bar. (2 points)
+
+Task 11: Submit the screenshot showing all dealers in Kansas through the Express-Mongo application endpoint. The endpoint should be visible on the browser address bar. (2 points)
+
+Task 12: Submit the screenshot showing the root user login on the admin page. (2 points)
+
+Task 13: Submit the screenshot showing the root user logged out from the admin page. (1 point)
+
+Task 14: Submit the screenshot (cars.png or cars.jpg) showing car makes (after adding or populating the car makes), and the endpoint should be visible on the browser address bar.  (2 points)
+
+Task 15: Submit the screenshot showing Car Models (after adding or populating the car models) from the admin page. (2 points)
+
+Task 16: Submit the screenshot showing the sentiment analyzer working through the deployed URL. Please ensure that the endpoint is visible in the browser address bar. (2 points)
+
+Task 17: Submit the screenshot showing the dealers on the home page of the Django application before logging in. Please ensure that the endpoint is visible in the browser address bar. (1 point)
+
+Task 18: Submit the screenshot showing the dealers on the home page of the Django application after logging in. The “Post Review” button and the logged-in username should be visible. Please ensure that the endpoint is visible in the browser address bar. (2 points)
+
+Task 19: Submit the screenshot showing the dealers filtered by state on the homepage of the Django application. Please ensure that the endpoint is visible in the browser address bar. (2 points)
+
+Task 20: Submit the screenshot showing the selected dealer details on the dealer page along with the reviews. Please ensure that the endpoint is visible in the browser address bar. (1 point)
+
+Task 21: Submit the screenshot showing the “Add Review” page after adding the details before you submit. Please ensure that the endpoint is visible in the browser address bar. (1 point)
+
+Task 22: Submit the screenshot showing the “Added Review” after submission. The details should match with the input shown in the previous task. Please ensure that the endpoint is visible in the browser address bar. (2 points)
+
+Task 23: Submit the screenshot of the successful CI/CD implementation on GitHub. (3 points)
+
+Task 24: Submit the deployment URL for your Django application. (1 point)
+https://shayleydon-8000.theiadockernext-1-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/
+
+Task 25: Submit the screenshot of the landing page opened through your deployment. The URL in the address bar of the browser should be visible, and it must match the URL submitted in the previous task. (2 points)
+
+Task 26: Submit the screenshot of the logged-in page opened through your deployment. It should show the username of the logged-in user. The URL in the address bar of the browser should be visible, and it must match the URL submitted in the previous task. (2 points)
+
+Task 27: Submit the screenshot of a dealer details page opened through your deployment. The URL in the address bar of the browser should be visible, and it must match the URL submitted in the previous task. (2 points)
+
+Task 28: Submit the screenshot of a review added through your deployed application. The URL in the address bar of the browser should be visible, and it must match the URL submitted in the previous task. (2 points)
+
