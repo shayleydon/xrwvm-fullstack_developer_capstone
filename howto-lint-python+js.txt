@@ -1,0 +1,12 @@
+ 1999  python3 -m venv venv
+ 2000  source venv/bin/activate
+ 2001  pip install -U -r requirements.txt
+ 2002  pip list
+ 2003  pip install flake8
+ 2005  flake8 ./djangoapp/models.py 
+ 
+ 2024  npm install jshint
+ 2029  npx jshint src/App.js 
+ 
+ OR install gloablly 
+  2024  npm install -g jshint
