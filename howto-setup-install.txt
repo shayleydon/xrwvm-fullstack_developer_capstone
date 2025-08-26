@@ -8,6 +8,7 @@ https://shayleydon-8000.theianext-0-labs-prod-misc-tools-us-east-0.proxy.cogniti
 https://shayleydon-8000.theianext-0-labs-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai/about/
 https://shayleydon-8000.theianext-0-labs-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai/contact/
 
+https://shayleydon-8000.theiadockernext-1-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/djangoapp/get_cars
 
 http://127.0.0.1:8000/fetchReviews/dealer/29
 http://127.0.0.1:8000/fetchDealers
@@ -29,7 +30,27 @@ python3 manage.py runserver
 cd /home/project/xrwvm-fullstack_developer_capstone/server/frontend
 npm install
 npm run build
-######################::Implement API endpoints using Express-Mongo database::######################
+######################::Run The Mongo Server :: Implement API endpoints using Express-Mongo database::######################
 cd /home/project/xrwvm-fullstack_developer_capstone/server/database
 docker build . -t nodeapp
 docker-compose up
+http://127.0.0.1:3030/
+######################::Populate CarMakes CarModels::######################
+python3 manage.py makemigrations
+python3 manage.py migrate --run-syncdb
+https://shayleydon-8000.theiadockernext-1-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/djangoapp/get_cars
+http://127.0.0.1:8000/djangoapp/get_cars
+######################::Deploy sentiment analysis on Code Engine as a microservice::######################
+cd xrwvm-fullstack_developer_capstone/server/djangoapp/microservices
+docker build . -t us.icr.io/${SN_ICR_NAMESPACE}/senti_analyzer
+docker push us.icr.io/${SN_ICR_NAMESPACE}/senti_analyzer
+ibmcloud ce application create --name sentianalyzer --image us.icr.io/${SN_ICR_NAMESPACE}/senti_analyzer --registry-secret icr-secret --port 5000
+==Welcome to the Sentiment Analyzer. Use /analyze/text to get the sentiment==
+https://sentianalyzer.1zig4lbbslky.us-south.codeengine.appdomain.cloud/analyze/Fantastic services
+
+
+
+
+https://shayleydon-8000.theiadockernext-1-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/fetchdealers
+https://shayleydon-8000.theiadockernext-1-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/dealers/
+https://shayleydon-3030.theiadockernext-1-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/fetchdealers
