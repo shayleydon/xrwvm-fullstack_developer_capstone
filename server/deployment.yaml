@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    run: dealership
+  name: dealership
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: dealership
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        run: dealership
+    spec:
+      containers:
+      - image: us.icr.io/your-name-space/dealership:latest
+        imagePullPolicy: Always
+        name: dealership
+        ports:
+        - containerPort: 8000
+          protocol: TCP
+      restartPolicy: Always
+
+# You must recall how to build your image and push it to the IBM Cloud Image Registry (ICR). You need to do the same here and then refer to this image in your Kubernetes deployment file.
+
+# Please export your SN Labs namespace and print it on the console as below:      
+
+# MY_NAMESPACE=$(ibmcloud cr namespaces | grep sn-labs-)
+# echo $MY_NAMESPACE      
+# Please enter your SN Labs namespace in place of your-name-space in the above file.

@@ -34,6 +34,7 @@ npm run build
 cd /home/project/xrwvm-fullstack_developer_capstone/server/database
 docker build . -t nodeapp
 docker-compose up
+NB. launch the application on Port 3030 to obtain the URL.
 http://127.0.0.1:3030/
 ######################::Populate CarMakes CarModels::######################
 python3 manage.py makemigrations
