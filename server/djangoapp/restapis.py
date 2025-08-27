@@ -28,7 +28,11 @@ def get_request(endpoint, **kwargs):
         response = requests.get(request_url)
         return response.json()
     # except Exception: # catches all exceptions and throws error
-    except:
+    # except: # lint error, avoid bare except:
+    # Using except Exception instead of a bare except 
+    # avoids catching exceptions like SystemExit, KeyboardInterrupt etc.
+    except Exception:
+    pass
         # If any error occurs
         print("Network exception occurred")
 
@@ -58,5 +62,9 @@ def post_review(data_dict):
         print(response.json())
         return response.json()
     # except Exception: # catches all exceptions and throws error
-    except:
+    # except: # lint error, avoid bare except:
+    # Using except Exception instead of a bare except 
+    # avoids catching exceptions like SystemExit, KeyboardInterrupt etc.
+    except Exception:
+    pass
         print("Network exception occurred")
